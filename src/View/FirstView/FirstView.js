@@ -12,9 +12,7 @@ export default class FirstView extends React.Component {
         return (
             <div
                 style={{
-                    backgroundColor: '#E5E5E5',
                     minHeight: '100vh',
-                    paddingTop: '100px',
                 }}
             >
                 <Container>
