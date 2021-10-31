@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
+import {withRouter} from "react-router-dom"
 import { Container, TopSectionTitle, TopSection, SearchSection, SearchGrid, SearchTitle, SubSearchTitle, SearchInput, WrapperSlider } from './style'
 import { Grid, Box, Slider } from "@material-ui/core";
 
@@ -19,16 +20,11 @@ class HomePage extends React.Component {
         };
     }
 
-componentDidUpdate(){
-    if(this.props.products.length>0 && this.state.productsDisplayed.length===0){
-    this.setState({ productsDisplayed: this.props.products })
+    componentDidUpdate() {
+        if (this.props.products.length > 0 && this.state.productsDisplayed.length === 0) {
+            this.setState({ productsDisplayed: this.props.products })
+        }
     }
-}
-
-    // componentDidUpdate() {
-    //     if(this.props.products.length>0){
-    //     
-    // }
 
     filterProducts = () => {
         let value = []
@@ -47,8 +43,8 @@ componentDidUpdate(){
         this.setState({ filter: { ...this.state.filter, [action]: value } }, this.filterProducts)
     }
 
-    toogleSelection=()=>{
-        console.log("push history")
+    toogleSelection = (id) => {
+       this.props.history.push(`/product/${id}`)
     }
 
     renderCards = () => {
@@ -56,7 +52,7 @@ componentDidUpdate(){
             return (
                 <Grid item key={idx} xs={12} sm={6} md={4} lg={3} style={{ display: "flex", justifyContent: "center", marginBottom: "25px" }}>
                     <Card product={product} toogleSelection={this.toogleSelection} />
-                    </Grid>)
+                </Grid>)
         })
         return value
     }
@@ -111,9 +107,9 @@ componentDidUpdate(){
 }
 
 let mapStateToProps = (state) => {
-    return{
-        products:state.products
+    return {
+        products: state.products
     }
-   };
- 
- export default connect(mapStateToProps)(HomePage)
+};
+
+export default withRouter(connect(mapStateToProps)(HomePage))

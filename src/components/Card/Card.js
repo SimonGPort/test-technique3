@@ -5,7 +5,7 @@ class Card extends React.Component {
 
     render() {
         return (
-            <CardContainer onClick={()=>{this.props.toogleSelection(this.props.product) }}>
+            <CardContainer onClick={()=>{this.props.toogleSelection(this.props.product.id) }}>
                  <Wrapper >
                      <img src={this.props.product.image_url} alt="beer" style={{ height: "180px" }}
                      />
