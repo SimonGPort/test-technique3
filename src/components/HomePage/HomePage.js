@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card'
 import { connect } from 'react-redux'
-import {withRouter} from "react-router-dom"
+import { withRouter } from "react-router-dom"
 import { Container, TopSectionTitle, TopSection, SearchSection, SearchGrid, SearchTitle, SubSearchTitle, SearchInput, WrapperSlider } from './style'
 import { Grid, Box, Slider } from "@material-ui/core";
 
@@ -20,6 +20,7 @@ class HomePage extends React.Component {
         };
     }
 
+    //Copy of the store for the local state
     componentDidMount() {
         this.connectStoreToLocalState()
     }
@@ -28,12 +29,12 @@ class HomePage extends React.Component {
         this.connectStoreToLocalState()
     }
 
-    connectStoreToLocalState=()=>{
+    connectStoreToLocalState = () => {
         if (this.props.products.length > 0 && this.state.productsDisplayed.length === 0) {
             this.setState({ productsDisplayed: this.props.products })
         }
     }
-
+    //filter function for the local state
     filterProducts = () => {
         let value = []
 
@@ -46,15 +47,16 @@ class HomePage extends React.Component {
 
         this.setState({ productsDisplayed: value })
     }
-
+    //dynamic filter function
     FilterAction = (action, value) => {
         this.setState({ filter: { ...this.state.filter, [action]: value } }, this.filterProducts)
     }
 
     toogleSelection = (id) => {
-       this.props.history.push(`/product/${id}`)
+        this.props.history.push(`/product/${id}`)
     }
 
+    //render the cards section
     renderCards = () => {
         const value = this.state.productsDisplayed.map((product, idx) => {
             return (

@@ -12,6 +12,7 @@ class ProductPage extends React.Component {
         };
     }
 
+    //Copy of the store for the local state
     componentDidMount() {
         this.connectStoreToLocalState()
     }
@@ -21,16 +22,17 @@ class ProductPage extends React.Component {
     }
 
     connectStoreToLocalState = () => {
-        if (this.state.productSelected === null && this.props.products.length>0) {
+        if (this.state.productSelected === null && this.props.products.length > 0) {
             const productSelected = this.props.products.find((elem) => { return elem.id === Number(this.props.match.params.productId) })
             this.setState({ productSelected })
         }
     }
 
+    //render the food pairing section
     foodPairing = () => {
         let value = ""
         this.state.productSelected.food_pairing.forEach((food, idx) => {
-            if (this.state.productSelected.food_pairing.length > 1 && idx!==0) {
+            if (this.state.productSelected.food_pairing.length > 1 && idx !== 0) {
                 value = value + ", " + food
             }
             else {

@@ -8,6 +8,7 @@ import { fetchBrewAction } from './redux/actions/fetchActions';
 
 class App extends React.Component {
 
+    //The api is fetch here and then send to the redux store
     componentDidMount(){
         fetchBrew().then(res => {
            this.props.fetchBrewAction(res)
@@ -26,6 +27,7 @@ class App extends React.Component {
     }
 }
 
+//Connection to the store
 const mapDispatchToProps=(dispatch)=>{
     return{
         fetchBrewAction:(products)=>{dispatch(fetchBrewAction(products))}

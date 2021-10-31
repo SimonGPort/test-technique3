@@ -2,7 +2,6 @@ const initState = {
     products: [],
 }
 
-
 const rootReducer = (state = initState, action) => {
     if (action.type === "FETCH_BREW") {
         return {
