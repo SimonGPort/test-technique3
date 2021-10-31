@@ -7,8 +7,8 @@ const fetchBrew = async () => {
    return body
     }
     catch(err){
-        throw err
         console.log(err)
+        throw err
     }
 }
 

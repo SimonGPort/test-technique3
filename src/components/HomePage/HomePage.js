@@ -1,6 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux'
 
-export default class HomePage extends React.Component {
+class HomePage extends React.Component {
     render() {
         return (
             <div>
@@ -9,3 +10,11 @@ export default class HomePage extends React.Component {
         );
     }
 }
+
+let mapStateToProps = (state) => {
+   return{
+       products:state.products
+   }
+  };
+
+export default connect(mapStateToProps)(HomePage)
