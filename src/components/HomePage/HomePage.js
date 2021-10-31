@@ -20,7 +20,15 @@ class HomePage extends React.Component {
         };
     }
 
+    componentDidMount() {
+        this.connectStoreToLocalState()
+    }
+
     componentDidUpdate() {
+        this.connectStoreToLocalState()
+    }
+
+    connectStoreToLocalState=()=>{
         if (this.props.products.length > 0 && this.state.productsDisplayed.length === 0) {
             this.setState({ productsDisplayed: this.props.products })
         }
@@ -109,7 +117,6 @@ class HomePage extends React.Component {
 let mapStateToProps = (state) => {
     return {
         products: state.products,
-        loading:state.loading
     }
 };
 
