@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Container } from 'semantic-ui-react';
 
-import Header from '../../components/Header';
-import HomePage from '../HomePage';
+import Header from '../../components/Header/Header';
+import HomePage from '../../components/HomePage/HomePage';
 
 export default class App extends React.Component {
     render() {
