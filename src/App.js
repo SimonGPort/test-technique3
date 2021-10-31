@@ -1,5 +1,6 @@
 import React from 'react';
 import FirstView from './View/FirstView/FirstView'
+import SecondView from './View/SecondView/SecondView'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import {connect} from 'react-redux'
 import fetchBrew from './services/initService';
@@ -17,7 +18,8 @@ class App extends React.Component {
         return (
             <React.StrictMode>
                 <Router>
-                    <Route path="/" component={FirstView} />
+                    <Route exact={true} path="/" component={FirstView} />
+                    <Route exact={true} path="/product/:productId" component={SecondView} />
                 </Router>
             </React.StrictMode>
         )
