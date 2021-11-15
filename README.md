@@ -1,3 +1,6 @@
+git remote -v
+https://gitlab.com/osedea-coding-challenge-montreal/coding-challenge-frontend_simon-giroux-portelance.git
+
 # Osedea Coding Challenge
 
 Hi there, thanks for applying to Osedea! We're happy you've made it this far. Read the instructions below carefully before you begin.
@@ -17,7 +20,6 @@ The client wants to create a web app that allows users to browse and view brewer
 
 </details>
 
-
 <details>
 <summary>Project B</summary>
 
@@ -32,40 +34,42 @@ In short, we're looking at two main evaluation criteria: **code** & **documentat
 #### Code
 
 **Regardless of the project chosen...**
-- You must have two pages/views:
-    - One page for looking through the list of ALL beers/breweries (note, each API may not return ALL results unless asked)
-    - One page for viewing the details of each beer/brewery
-    - This means I should be able to browse through the list and be able to click on any given one to view more details
-- You don't need to show all the details of all/any item, show some of the most relevant or whatever is most interesting
-- Some method of filtering/searching is a nice to have, but not required.
-- [Semantic UI React](https://react.semantic-ui.com/) is included to provide some base components & styling, although you are free to not use it.
-- Feel free to refactor or modify this project in any way you feel is necessary, within reason. However, please try to avoid changing the programming stack used and/or restarting the project from scratch.
-- You are limited only by your imagination (and what the API can do)!
+
+-   You must have two pages/views:
+    -   One page for looking through the list of ALL beers/breweries (note, each API may not return ALL results unless asked)
+    -   One page for viewing the details of each beer/brewery
+    -   This means I should be able to browse through the list and be able to click on any given one to view more details
+-   You don't need to show all the details of all/any item, show some of the most relevant or whatever is most interesting
+-   Some method of filtering/searching is a nice to have, but not required.
+-   [Semantic UI React](https://react.semantic-ui.com/) is included to provide some base components & styling, although you are free to not use it.
+-   Feel free to refactor or modify this project in any way you feel is necessary, within reason. However, please try to avoid changing the programming stack used and/or restarting the project from scratch.
+-   You are limited only by your imagination (and what the API can do)!
 
 #### Documentation
 
 You will also need to provide documentation to the client and your team so they can better understand the application that you've built, your approach to solving it and the decisions you took while building it. There's a blank document for you to use [here](./docs/Submission.md).
 
 You should document as many of the following as applicable:
-- how you approached the problem
-- explain your reasoning behind any technical decisions you made (for example: libraries, coding paradigms used, etc)
-- best practices or changes you would make if this were a real production app
-- any learning resources used
-- if some steps were not completed, the steps you would have taken in your approach to complete them.
-- any major issues encountered and the solutions found (or not)
+
+-   how you approached the problem
+-   explain your reasoning behind any technical decisions you made (for example: libraries, coding paradigms used, etc)
+-   best practices or changes you would make if this were a real production app
+-   any learning resources used
+-   if some steps were not completed, the steps you would have taken in your approach to complete them.
+-   any major issues encountered and the solutions found (or not)
 
 If you get stuck or are unable to complete, try to explain what happened, what you did to try to resolve it, and how you would've finished the rest of the challenge.
 
 ### Prerequisites (need to be installed)
 
-  - git
-  - node
+-   git
+-   node
 
 ### Getting started
 
-  - Clone this repository/project to your computer
-  - Install dependencies using `yarn` (or `npm install`)
-  - Run the project using `yarn start` (or `npm start`)
+-   Clone this repository/project to your computer
+-   Install dependencies using `yarn` (or `npm install`)
+-   Run the project using `yarn start` (or `npm start`)
 
 ### Submitting
 
